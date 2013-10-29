@@ -16,6 +16,7 @@
   "maxzoom": 22,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
+    "crossings.mss",
     "style.mss",
     "shapefiles.mss",
     "landcover.mss",
@@ -1656,6 +1657,30 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "placenames-small"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        12.083028098318032,
+        48.32161689487754,
+        20.66035559712406,
+        54.43412409472489
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(\n      select distinct on (p.way) p.way as way,\n        p.crossing,\n        degrees( ST_azimuth(coalesce(ST_Line_Interpolate_Point(l.way, ST_line_locate_point(l.way,p.way) * 0.99), p.way),\n                            coalesce(ST_Line_Interpolate_Point(l.way, (1 - (1 - ST_line_locate_point(l.way,p.way)) * 0.99)), p.way))) as angle\n\n       from planet_osm_point p\n       join planet_osm_line l\n        on ST_DWithin(p.way,l.way,0.1)\n       join (values\n        ('motorway',1),\n        ('trunk',2),\n        ('primary',3),\n        ('secondary',4),\n        ('tertiary',5),\n        ('unclassified',6),\n        ('residential',7),\n        ('living_street',8),\n        ('service',9),\n        ('cycleway',10)\n       ) as v (highway,prio)\n        on v.highway=l.highway\n       where p.highway='crossing'\n       order by p.way,v.prio\n     ) as crossing",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "1345076.53514558,6160528.1876544,2299900.26467981,7252806.71510139",
+        "dbname": "gis"
+      },
+      "id": "crossings",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "crossings"
     },
     {
       "geometry": "point",
