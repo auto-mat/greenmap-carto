@@ -1,15 +1,4 @@
 .symbols {
-  [aeroway = 'helipad'][zoom >= 16]::aeroway {
-    point-file: url('symbols/helipad.p.16.png');
-    text-name: "[name]";
-    text-size: 8;
-    text-fill: #6692da;
-    text-dy: -10;
-    text-face-name: @bold-fonts;
-    text-halo-radius: 1;
-    text-placement: interior;
-  }
-
   [aeroway = 'airport'][zoom >= 9][zoom < 13]::aeroway {
     [zoom < 11] {
       point-file: url('symbols/airport.p.16.png');
@@ -43,31 +32,6 @@
     [zoom >= 16] {
       point-file: url('symbols/level_crossing2.png');
     }
-  }
-
-  [man_made = 'lighthouse'][zoom >= 15]::man_made {
-    point-file: url('symbols/lighthouse.p.20.png');
-    point-placement: interior;
-  }
-
-  [natural = 'peak'][zoom >= 11]::natural {
-    point-file: url('symbols/peak.png');
-    point-placement: interior;
-  }
-
-  [natural = 'volcano'][zoom >= 11]::natural {
-    point-file: url('symbols/volcano.png');
-    point-placement: interior;
-  }
-
-  [natural = 'cave_entrance'][zoom >= 15]::natural {
-    point-file: url('symbols/poi_cave.p.16.png');
-    point-placement: interior;
-  }
-
-  [natural = 'spring'][zoom >= 14]::natural {
-    point-file: url('symbols/spring.png');
-    point-placement: interior;
   }
 
   [natural = 'tree'][zoom >= 16]::natural {
