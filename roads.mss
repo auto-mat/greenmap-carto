@@ -1,4 +1,6 @@
 /* For the main linear features, such as roads and railways. */
+@color-tram: #DA1B8A;
+@color-railway: black;
 
 @motorway-fill: #89a4cb;
 @trunk-fill: #94d494;
@@ -1001,7 +1003,7 @@
     line-dasharray: 2,1;
   }
 
-  #roads-fill::footway{
+  ::footway {
   [feature = 'highway_bridleway'],
   [feature = 'highway_path'][horse = 'designated'] {
     [zoom >= 13][tunnel != 'yes'] {
@@ -1055,173 +1057,31 @@
   }
   }
 
-    [feature = 'railway_rail'][tunnel = 'yes'][zoom >= 13],
-    [feature = 'railway_spur-siding-yard'][tunnel = 'yes'][zoom >= 13] {
-      a/line-width: 3;
-      b/line-width: 3;
-      c/line-width: 3;
-      d/line-width: 3;
-      e/line-width: 3;
-      f/line-width: 3;
-      g/line-width: 3;
-      a/line-color: #ffffff;
-      b/line-color: #fdfdfd;
-      c/line-color: #ececec;
-      d/line-color: #cacaca;
-      e/line-color: #afafaf;
-      f/line-color: #a1a1a1;
-      g/line-color: #9b9b9b;
-      a/line-dasharray: 1,9;
-      b/line-dasharray: 0,1,1,8;
-      c/line-dasharray: 0,2,1,7;
-      d/line-dasharray: 0,3,1,6;
-      e/line-dasharray: 0,4,1,5;
-      f/line-dasharray: 0,5,1,4;
-      g/line-dasharray: 0,6,1,3;
-      a/line-join: round;
-      b/line-join: round;
-      c/line-join: round;
-      d/line-join: round;
-      e/line-join: round;
-      f/line-join: round;
-      g/line-join: round;
-      [feature = 'railway_spur-siding-yard'] {
-        a/line-width: 2;
-        b/line-width: 2;
-        c/line-width: 2;
-        d/line-width: 2;
-        e/line-width: 2;
-        f/line-width: 2;
-        g/line-width: 2;
-      }
-    }
-
-    [feature = 'railway_rail'][tunnel != 'yes'][zoom >= 13] {
-      a/line-width: 3;
-      a/line-color: #999999;
-      a/line-join: round;
-      b/line-width: 1;
-      b/line-color: white;
-      b/line-dasharray: 8,12;
-      b/line-join: round;
-      [zoom >= 14] {
-        b/line-dasharray: 0,11,8,1;
-      }
-    }
-
-    [feature = 'railway_spur-siding-yard'][zoom >= 11] {
-      a/line-width: 1;
-      a/line-color: #aaa;
-      a/line-join: round;
-      [zoom >= 13][tunnel != 'yes'] {
-        a/line-color: #999999;
-        a/line-width: 2;
-        b/line-width: 0.8;
-        b/line-dasharray: 0,8,11,1;
-        b/line-color: white;
-        b/line-join: round;
-      }
-    }
-
+    [feature = 'railway_rail'][tunnel != 'yes'],
     [feature = 'railway_narrow_gauge'],
+    [feature = 'railway_miniature'][zoom >= 15],
+    [feature = 'railway_light_rail'],
+    [feature = 'railway_monorail'],
     [feature = 'railway_funicular'] {
-      [zoom >= 13] {
-        a/line-width: 2;
-        a/line-color: #666;
-        [tunnel = 'yes'] {
-          a/line-width: 5;
-          a/line-dasharray: 5,3;
-          b/line-color: #fff;
-          b/line-width: 4;
-          c/line-color: #aaa;
-          c/line-width: 1.5;
-        }
+      [zoom >= 10] {
+         line-width: 0.75;
+         line-color: @color-railway;
+         line-join: round;
+         [zoom >= 13] {
+            line-width: 1;
+         }
+         [zoom >= 14] {
+            line-width: 1.25;
+         }
       }
-    }
-
-    [feature = 'railway_miniature'][zoom >= 15] {
-      a/line-width: 1.2;
-      a/line-color: #999;
-      b/line-width: 3;
-      b/line-color: #999;
-      b/line-dasharray: 1,10;
     }
 
     [feature = 'railway_tram'][tunnel = 'yes'][zoom >= 13] {
       line-width: 1;
       line-dasharray: 5,3;
-      line-color: #444;
-      [zoom >= 15] { line-width: 2; }
+      line-color: @color-tram;
     }
 
-    [feature = 'railway_light_rail'][zoom >= 13] {
-      line-width: 2;
-      line-color: #666;
-      [tunnel = 'yes'] {
-        line-dasharray: 5,3;
-      }
-    }
-
-    [feature = 'railway_subway'][zoom >= 12] {
-      line-width: 2;
-      line-color: #999;
-      [tunnel = 'yes'] {
-        line-dasharray: 5,3;
-      }
-    }
-
-
-    [feature = 'railway_preserved'][zoom >= 12] {
-      line-width: 1.5;
-      line-color: #aaa;
-      line-join: round;
-      [zoom >= 13] {
-        line-width: 3;
-        line-color: #999999;
-        b/line-width: 1;
-        b/line-color: white;
-        b/line-dasharray: 0,1,8,1;
-        b/line-join: round;
-      }
-    }
-
-    [feature = 'railway_INT-preserved-ssy'][zoom >= 12] {
-      line-width: 1;
-      line-color: #aaa;
-      line-join: round;
-      [zoom >= 13] {
-        line-width: 2;
-        line-color: #999999;
-        b/line-width: 0.8;
-        b/line-color: white;
-        b/line-dasharray: 0,1,8,1;
-        b/line-join: round;
-      }
-    }
-
-    [feature = 'railway_monorail'][zoom >= 14] {
-      line-width: 4;
-      line-color: #fff;
-      line-opacity: 0.4;
-      line-cap: round;
-      line-join: round;
-      b/line-width: 3;
-      b/line-color: #777;
-      b/line-dasharray: 2,3;
-      b/line-cap: round;
-      b/line-join: round;
-    }
-
-    [feature = 'railway_disused'],
-    [feature = 'railway_abandoned'],
-    [feature = 'railway_construction'] {
-      [zoom >= 13] {
-        line-color: grey;
-        line-width: 2;
-        line-dasharray: 2,4;
-        line-join: round;
-      }
-    }
 
     [feature = 'railway_platform'] {
       [zoom >= 16] {
@@ -1568,22 +1428,6 @@
         line-join: round;
       }
 
-      [feature = 'railway_INT-spur-siding-yard'][zoom >= 13] {
-        line-width: 5.7;
-        line-color: black;
-        line-join: round;
-      }
-
-      [feature = 'railway_disused'],
-      [feature = 'railway_abandoned'],
-      [feature = 'railway_construction'] {
-        [zoom >= 13] {
-          line-width: 6;
-          line-color: black;
-          line-join: round;
-        }
-      }
-
     [feature = 'aeroway_runway'][zoom >= 14] {
       line-width: 19;
       line-color: black;
@@ -1794,51 +1638,25 @@
       [zoom >= 16] { line-width: 8; }
     }
 
-      [feature = 'railway_rail'][zoom >= 13] {
-        line-width: 3;
-        line-color: #999999;
-        line-join: round;
-        b/line-width: 1;
-        b/line-color: white;
-        b/line-dasharray: 8,12;
-        b/line-join: round;
-        [zoom >= 14] {
-          b/line-dasharray: 0,11,8,1;
-        }
+      [feature = 'railway_light_rail'],
+      [feature = 'railway_narrow_gauge'],
+      [feature = 'railway_rail'] {
+      [zoom >= 10] {
+         line-width: 0.75;
+         line-color: @color-railway;
+         line-join: round;
+         [zoom >= 13] {
+            line-width: 1;
+         }
+         [zoom >= 14] {
+            line-width: 1.25;
+         }
       }
-
-      [feature = 'railway_INT-spur-siding-yard'][zoom >= 13] {
-        line-width: 2;
-        line-color: #999999;
-        line-join: round;
-        b/line-width: 0.8;
-        b/line-color: white;
-        b/line-dasharray: 0,8,11,1;
-        b/line-join: round;
-      }
-
-      [feature = 'railway_disused'],
-      [feature = 'railway_abandoned'],
-      [feature = 'railway_construction'] {
-        [zoom >= 13] {
-          line-width: 2;
-          line-color: grey;
-          line-dasharray: 2,4;
-          line-join: round;
-        }
       }
 
       [feature = 'railway_subway'][zoom >= 14] {
         line-width: 2;
         line-color: #999;
-      }
-
-      [feature = 'railway_light_rail'],
-      [feature = 'railway_narrow_gauge'] {
-        [zoom >= 14] {
-          line-width: 2;
-          line-color: #666;
-        }
       }
 
     [feature = 'aeroway_runway'][zoom >= 14] {
@@ -1923,19 +1741,33 @@
     }
 }
 
+#footway-over-dots{
+  [highway = 'footway'],
+  [highway = 'bridleway'],
+  [highway = 'pedestrian'],
+  [highway = 'cycleway'] {
+    [zoom >= 13] {
+      line-width: 2;
+      line-color: @footway-fill;
+      line-dasharray: 1,4;
+      line-cap: round;
+      line-join: round;
+    }
+  }
+}
+
 #trams {
   [railway = 'tram'][zoom >= 13] {
-    line-color: #444;
+    line-color: @color-tram;
     line-width: 1;
     [zoom >= 15] {
-      line-width: 2;
       [bridge = 'yes'] {
         line-width: 5;
         line-color: black;
         b/line-width: 4;
         b/line-color: white;
-        c/line-width: 2;
-        c/line-color: #444;
+        c/line-width: 1;
+        c/line-color: @color-tram;
       }
     }
   }
@@ -2187,83 +2019,6 @@
     [zoom >= 17] {
       text-size: 11;
       text-spacing: 400;
-    }
-  }
-  /* Other things, not just roads */
-  [zoom >= 15] {
-    text-name: "[name]";
-    text-size: 9;
-    text-fill: #000;
-    text-clip: false;
-    text-placement: line;
-    text-face-name: @book-fonts;
-    text-halo-radius: 1;
-  }
-  [zoom >= 17] {
-      text-size: 11;
-  }
-}
-
-.directions {
-  [zoom >= 16] {
-    [oneway = 'yes'] {
-      a/line-width: 1;
-      a/line-dasharray: 0,12,10,152;
-      a/line-color: #6c70d5;
-      a/line-join: bevel;
-      a/line-clip: false;
-      b/line-width: 2;
-      b/line-dasharray: 0,12,9,153;
-      b/line-color: #6c70d5;
-      b/line-join: bevel;
-      b/line-clip: false;
-      c/line-width: 3;
-      c/line-dasharray: 0,18,2,154;
-      c/line-color: #6c70d5;
-      c/line-join: bevel;
-      c/line-clip: false;
-      d/line-width: 4;
-      d/line-dasharray: 0,18,1,155;
-      d/line-color: #6c70d5;
-      d/line-join: bevel;
-      d/line-clip: false;
-    }
-    [oneway = '-1'] {
-      a/line-width: 1;
-      a/line-dasharray: 0,12,10,152;
-      a/line-color: #6c70d5;
-      a/line-join: bevel;
-      a/line-clip: false;
-      b/line-width: 2;
-      b/line-dasharray: 0,13,9,152;
-      b/line-color: #6c70d5;
-      b/line-join: bevel;
-      b/line-clip: false;
-      c/line-width: 3;
-      c/line-dasharray: 0,14,2,158;
-      c/line-color: #6c70d5;
-      c/line-join: bevel;
-      c/line-clip: false;
-      d/line-width: 4;
-      d/line-dasharray: 0,15,1,158;
-      d/line-color: #6c70d5;
-      d/line-join: bevel;
-      d/line-clip: false;
-    }
-  }
-}
-
-#footway-over-dots{
-  [highway = 'footway'],
-  [highway = 'bridleway'],
-  [highway = 'pedestrian'],
-  [highway = 'cycleway'] {
-    [zoom >= 13] {
-      line-width: 2;
-      line-color: @footway-fill;
-      line-dasharray: 1,4;
-      line-cap: round;
-      line-join: round;
     }
   }
 }
