@@ -435,6 +435,14 @@
     line-width: 3;
     line-color: #aed1a0;
   }
+  [barrier = 'fence'][fence_type = 'railing'][zoom >= 16] {
+    line-width: 0.7;
+    line-color: white;
+    line-opacity: 1;
+    a/line-width: 0.4;
+    a/line-color: red;
+    a/line-dasharray: 10,10;
+  }
 }
 
 
