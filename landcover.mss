@@ -1,6 +1,7 @@
 // --- Parks, woods, other green things ---
 
 @forest: #73c82c;
+@forest-symbol-opacity: 0.3;
 @grass: #73c82c; // also meadow, common, garden, village_green, conservation
 @golf_course: #b5e3b5;
 @natural: #c6e4b4; // also grassland
@@ -8,6 +9,13 @@
 @park-opacity: 1;
 @wood: #73c82c;
 @vineyard: #73c82c;
+@vineyard-symbol-opacity: 0.3;
+@orchard: #73c82c;
+@orchard-symbol-opacity: 0.3;
+@scrub: #73c82c;
+@scrub-symbol-opacity: 0.3;
+@zoo: #73c82c;
+@zoo-symbol-opacity: 0.3;
 
 // --- sports ---
 
@@ -27,6 +35,7 @@
 @barracks: #ff8f8f;
 @campsite: #ccff99; // also caravan_site, picnic_site
 @cemetery: #aacbaf; // also grave_yard
+@cemetery-symbol-opacity: 0.3;
 @construction: #d0d0d0;
 @construction-opacity: 1;
 @commercial: #efc8c8;
@@ -84,28 +93,40 @@
   }
 
   [feature = 'landuse_vineyard'] {
-    [zoom >= 10][zoom < 13] {
+    [zoom >= 10] {
       polygon-fill: @vineyard;
     }
     [zoom >= 13] {
       polygon-pattern-file: url('symbols/vineyard.png');
+      polygon-pattern-opacity: @vineyard-symbol-opacity;
     }
   }
 
   [feature = 'landuse_orchard'][zoom >= 10] {
+    polygon-fill: @orchard;
+    polygon-pattern-opacity: @orchard-symbol-opacity;
     polygon-pattern-file: url('symbols/orchard.png');
   }
 
   [feature = 'landuse_cemetery'],
   [feature = 'landuse_grave_yard'],
   [feature = 'amenity_grave_yard'] {
-    [zoom >= 10][zoom < 14] {
+    [zoom >= 10] {
       polygon-fill: @cemetery;
     }
     [zoom >= 14] {
-      [religion = 'jewish'] { polygon-pattern-file: url('symbols/cemetery_jewish.18.png'); }
-      [religion = 'christian'] { polygon-pattern-file: url('symbols/grave_yard.png'); }
-      [religion = 'INT-generic'] { polygon-pattern-file: url('symbols/grave_yard_generic.png'); }
+      [religion = 'jewish'] { 
+         polygon-pattern-file: url('symbols/cemetery_jewish.png');
+         polygon-pattern-opacity: @cemetery-symbol-opacity;
+      }
+      [religion = 'christian'] { 
+         polygon-pattern-file: url('symbols/grave_yard.png');
+         polygon-pattern-opacity: @cemetery-symbol-opacity;
+      }
+      [religion = 'INT-generic'] { 
+         polygon-pattern-file: url('symbols/grave_yard_generic.png');
+         polygon-pattern-opacity: @cemetery-symbol-opacity;
+      }
     }
   }
 
@@ -162,6 +183,8 @@
 
   [feature = 'tourism_zoo'][zoom >= 10] {
     polygon-pattern-file: url('symbols/zoo.png');
+    polygon-fill: @zoo;
+    polygon-pattern-opacity: @zoo-symbol-opacity;
   }
 
   [feature = 'leisure_common'][zoom >= 10] {
@@ -177,20 +200,18 @@
   }
 
   [feature = 'landuse_allotments'] {
-    [zoom >= 10][zoom < 14] {
+    [zoom >= 10] {
       polygon-fill: @allotments;
-    }
-    [zoom >= 14] {
-      polygon-pattern-file: url('symbols/allotments.png');
     }
   }
 
   [feature = 'landuse_forest'] {
-    [zoom >= 8][zoom < 14] {
+    [zoom >= 8] {
       polygon-fill: @forest;
     }
     [zoom >= 14] {
       polygon-pattern-file: url('symbols/forest.png');
+      polygon-pattern-opacity: @forest-symbol-opacity;
     }
   }
 
@@ -285,11 +306,12 @@
   }
 
   [feature = 'natural_scrub'] {
-    [zoom >= 10][zoom < 14] {
-      polygon-fill: #b5e3b5;
+    [zoom >= 10] {
+      polygon-fill: @scrub;
     }
     [zoom >= 14] {
       polygon-pattern-file: url('symbols/scrub.png');
+      polygon-pattern-opacity: @scrub-symbol-opacity;
     }
   }
 
