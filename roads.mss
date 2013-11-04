@@ -1,17 +1,17 @@
 /* For the main linear features, such as roads and railways. */
-@color-tram: #DA1B8A;
+@color-tram: #da1b8a;
 @color-railway: black;
 
-@motorway-fill: #89a4cb;
-@trunk-fill: #94d494;
-@trunk-fill-alternative: #97d397;
-@primary-fill: #dd9f9f;
-@secondary-fill: #f9d6aa;
-@tertiary-fill: #f8f8ba;
+@motorway-fill: #bfbfbf;
+@trunk-fill: #bfbfbf;
+@trunk-fill-alternative: #bfbfbf;
+@primary-fill: #c9c9c9;
+@secondary-fill: #d3d3d3;
+@tertiary-fill: #e9e9e9;
 @residential-fill: #ffffff;
 @service-fill: #ffffff;
-@living-street-fill: #ccc;
-@pedestrian-fill: #ededed;
+@living-street-fill: white;
+@pedestrian-fill: white;
 @road-fill: #ddd;
 @path-fill: white;
 @footway-fill: white;
@@ -25,25 +25,22 @@
 @taxiway-fill: @aeroway-fill;
 @helipad-fill: @aeroway-fill;
 
-@default-casing: white;
-@motorway-casing: #7788a1;
-@trunk-casing: #7eae7e;
-@primary-casing: #c57b7e;
-@secondary-casing: #cca16a;
-@tertiary-casing: #c6c68a;
-@residential-casing: #bbb;
-@service-casing: #999;
+@default-casing: #bdbdbd;
+@motorway-casing: @default-casing;
+@trunk-casing: @default-casing;
+@primary-casing: @default-casing;
+@secondary-casing: @default-casing;
+@tertiary-casing: @default-casing;
+@residential-casing: @default-casing;
+@service-casing: @default-casing;
 @living-street-casing: @default-casing;
-@pedestrian-casing: grey;
+@pedestrian-casing: @default-casing;
 @path-casing: @default-casing;
 @footway-casing: @default-casing;
 @steps-casing: @default-casing;
 @cycleway-casing: @default-casing;
 @bridleway-casing: @default-casing;
 @track-casing: @default-casing;
-
-@residential-construction: #aaa;
-@service-construction: #aaa;
 
 @permissive-marking: #cf9;
 @destination-marking: #c2e0ff;
@@ -752,92 +749,6 @@
 }
 
 #roads-fill {
-
-  /*
-   * The construction rules for small roads are strange, since if construction is null its assumed that
-   * it's a more major road. The line-width = 0 could be removed by playing with the query to set a construction
-   * string for non-small roads.
-   *
-   * Also note that these rules are quite sensitive to re-ordering, since the instances end up swapping round
-   * (and then the dashes appear below the fills). See
-   * https://github.com/gravitystorm/openstreetmap-carto/issues/23
-   * https://github.com/mapbox/carto/issues/235
-   * https://github.com/mapbox/carto/issues/237
-   */
-  [feature = 'highway_proposed'],
-  [feature = 'highway_construction'] {
-    [zoom >= 12] {
-      line-width: 2;
-      line-color: #9cc;
-
-      [construction = 'motorway'],
-      [construction = 'motorway_link'] {
-        line-color: @motorway-fill;
-      }
-      [construction = 'trunk'],
-      [construction = 'trunk_link'] {
-        line-color: @trunk-fill;
-      }
-      [construction = 'primary'],
-      [construction = 'primary_link'] {
-        line-color: @primary-fill;
-      }
-      [construction = 'secondary'],
-      [construction = 'secondary_link'] {
-        line-color: @secondary-fill;
-      }
-      [construction = 'tertiary'],
-      [construction = 'tertiary_link'] {
-        line-color: @tertiary-fill;
-        [zoom < 13] {
-          line-width: 0;
-          b/line-width: 0;
-        }
-      }
-      [construction = 'residential'],
-      [construction = 'unclassified'],
-      [construction = 'living_street'] {
-        line-color: @residential-construction;
-        [zoom < 13] {
-          line-width: 0;
-          b/line-width: 0;
-        }
-      }
-      [construction = 'service'] {
-        line-color: @service-construction;
-        [zoom < 14] {
-          line-width: 0;
-          b/line-width: 0;
-        }
-      }
-      b/line-width: 2;
-      b/line-dasharray: 4,2;
-      b/line-color: white;
-      [zoom >= 13] {
-        line-width: 4;
-        b/line-width: 3.5;
-        b/line-dasharray: 6,4;
-      }
-      [zoom >= 16] {
-        line-width: 8;
-        b/line-width: 7;
-        b/line-dasharray: 8,6;
-      }
-      [construction = 'cycleway'] {
-        [zoom < 14] {
-          line-width: 0;
-          b/line-width: 0;
-        }
-        line-color: white;
-        line-width: 3;
-        line-opacity: 0.4;
-        b/line-width: 1.2;
-        b/line-color: #69f;
-        b/line-dasharray: 2,6;
-      }
-    }
-  }
-
   [feature = 'highway_motorway'][tunnel != 'yes'] {
     [zoom >= 12] {
       line-width: @motorway-width-z12;

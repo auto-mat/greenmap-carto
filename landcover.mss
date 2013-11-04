@@ -1,39 +1,44 @@
 // --- Parks, woods, other green things ---
 
-@forest: #8dc56c;
-@grass: #cfeca8; // also meadow, common, garden, village_green, conservation
+@forest: #73c82c;
+@grass: #73c82c; // also meadow, common, garden, village_green, conservation
 @golf_course: #b5e3b5;
 @natural: #c6e4b4; // also grassland
-@park: #b6fdb6; // also recreation_ground
-@wood: #aed1a0;
-@vineyard: #abdf96;
+@park: #73c82c; // also recreation_ground
+@park-opacity: 1;
+@wood: #73c82c;
+@vineyard: #73c82c;
 
 // --- sports ---
 
 @stadium: #3c9; // also sports_centre
+@stadium-opacity: 0.3;
 @track: #74dcba;
+@track-opacity: 0.3;
 @pitch: #8ad3af;
+@pitch-opacity: 0.3;
 
 // --- Other ----
 
 @aerodrome: #ccc;
-@allotments: #e5c7ab;
+@allotments: #73c82c;
 @apron: #e9d1ff;
 @attraction: #f2caea;
 @barracks: #ff8f8f;
 @campsite: #ccff99; // also caravan_site, picnic_site
 @cemetery: #aacbaf; // also grave_yard
-@construction: #9d9d6c;
+@construction: #d0d0d0;
+@construction-opacity: 1;
 @commercial: #efc8c8;
 @danger_area: pink;
 @desert: #e3b57a;
 @field: #660;
 @garages: #996;
 @heath: #d6d99f;
-@industrial: #dfd1d6; // also railway
+@industrial: #d0d0d0; // also railway
 @farmyard: #ddbf92;
 @farm: #ead8bd; // also farmland
-@parking: #f7efb7;
+@parking: #d0d0d0;
 @playground: #ccfff1;
 @power: #bbb;
 @rest_area: #efc8c8; // also services
@@ -41,6 +46,8 @@
 @residential: #ddd;
 @sand: #ffdf88;
 @school: #f0f0d8; // also university, college, hospital, kindergarten
+@barrier: #444;
+@barrier-width: 1;
 
 #landcover {
  [feature = 'leisure_swimming_pool'][zoom >= 14] {
@@ -149,7 +156,7 @@
   [feature = 'leisure_recreation_ground'] {
     [zoom >= 10] {
       polygon-fill: @park;
-      polygon-opacity: 0.6;
+      polygon-opacity: @park-opacity;
     }
   }
 
@@ -251,7 +258,7 @@
   [feature = 'landuse_construction'] {
     [zoom >= 10] {
       polygon-fill: @construction;
-      polygon-opacity: 0.7;
+      polygon-opacity: @construction-opacity;
     }
   }
 
@@ -349,17 +356,20 @@
   [leisure = 'stadium'] {
     [zoom >= 10] {
       polygon-fill: @stadium;
+      polygon-opacity: @stadium-opacity;
     }
   }
 
   [leisure = 'track'][zoom >= 10] {
     polygon-fill: @track;
+    polygon-opacity: @track-opacity;
     line-width: 0.5;
     line-color: #888;
   }
 
   [leisure = 'pitch'][zoom >= 10] {
     polygon-fill: @pitch;
+    polygon-opacity: @pitch-opacity;
     line-width: 0.5;
     line-color: #888;
   }
@@ -414,8 +424,8 @@
 
 #area-barriers {
   [zoom >= 16] {
-    line-color: #444;
-    line-width: 0.4;
+    line-color: @barrier;
+    line-width: @barrier-width;
     [barrier = 'hedge'] {
       polygon-fill: #aed1a0;
     }
@@ -424,22 +434,22 @@
 
 .barriers {
   [zoom >= 16] {
-    line-width: 0.4;
-    line-color: #444;
+    line-width: @barrier-width;
+    line-color: @barrier;
   }
   [barrier = 'embankment'][zoom >= 14] {
-    line-width: 0.4;
-    line-color: #444;
+    line-width: @barrier-width;
+    line-color: @barrier;
   }
   [barrier = 'hedge'][zoom >= 16] {
     line-width: 3;
     line-color: #aed1a0;
   }
   [barrier = 'fence'][fence_type = 'railing'][zoom >= 16] {
-    line-width: 0.7;
+    line-width: @barrier-width;
     line-color: white;
     line-opacity: 1;
-    a/line-width: 0.4;
+    a/line-width: @barrier-width;
     a/line-color: red;
     a/line-dasharray: 10,10;
   }
