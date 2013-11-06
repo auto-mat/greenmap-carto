@@ -82,5 +82,6 @@
     text-halo-radius: 1;
     text-wrap-width: 20;
     text-placement: interior;
+    text-dy: 6;
   }
 }
