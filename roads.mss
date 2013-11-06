@@ -2,6 +2,11 @@
 @color-tram: #da1b8a;
 @color-railway: black;
 
+@platform: white;
+@highway_platform_casing: #0092DA;
+@railway_platform_casing: gray;
+@tram_platform_casing: @color-tram;
+
 @motorway-fill: #bfbfbf;
 @trunk-fill: #bfbfbf;
 @trunk-fill-alternative: #bfbfbf;
@@ -243,14 +248,22 @@
     line-color: @track-fill;
     line-width: 2;
   }
+}
 
-  [feature = 'highway_platform'],
-  [feature = 'railway_platform'] {
+#highway-area-casing::platform {
+  [feature = 'highway_platform']::highway,
+  [feature = 'railway_platform']::railway {
     [zoom >= 16] {
-      line-color: grey;
+      line-color: @highway_platform_casing;
       line-width: 2;
       line-cap: round;
       line-join: round;
+      [feature = 'railway_platform'] {
+         line-color: @railway_platform_casing;
+      }
+      [feature = 'railway_platform'][tram = 'yes'] {
+         line-color: @tram_platform_casing;
+      }
     }
   }
 }
@@ -888,10 +901,10 @@
     [zoom >= 16] {
       line-join: round;
       line-width: 6;
-      line-color: grey;
+      line-color: @highway_platform_casing;
       line-cap: round;
       b/line-width: 4;
-      b/line-color: #bbbbbb;
+      b/line-color: @platform;
       b/line-cap: round;
       b/line-join: round;
     }
@@ -993,20 +1006,6 @@
       line-color: @color-tram;
     }
 
-
-    [feature = 'railway_platform'] {
-      [zoom >= 16] {
-        line-join: round;
-        line-width: 6;
-        line-color: grey;
-        line-cap: round;
-        b/line-width: 4;
-        b/line-color: #bbbbbb;
-        b/line-cap: round;
-        b/line-join: round;
-      }
-    }
-
     [feature = 'railway_turntable'][zoom >= 16] {
       line-width: 1.5;
       line-color: #999;
@@ -1036,6 +1035,24 @@
       line-width: 6;
     }
   }
+}
+
+#roads-fill::platform {
+    [feature = 'railway_platform'] {
+      [zoom >= 16] {
+        line-join: round;
+        line-width: 6;
+        line-color: @railway_platform_casing;
+        line-cap: round;
+        b/line-width: 4;
+        b/line-color: @platform;
+        b/line-cap: round;
+        b/line-join: round;
+        [tram = 'yes'] {
+           line-color: @tram_platform_casing;
+        }
+      }
+    }
 }
 
 /* This is a good target for refactoring */
