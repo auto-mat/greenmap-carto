@@ -7,6 +7,8 @@
 @railway_platform_casing: gray;
 @tram_platform_casing: @color-tram;
 
+@roads-text: #2A3E92;
+
 @motorway-fill: #bfbfbf;
 @trunk-fill: #bfbfbf;
 @trunk-fill-alternative: #bfbfbf;
@@ -1722,12 +1724,13 @@
     [zoom >= 13] {
       text-name: "[name]";
       text-size: 8;
-      text-fill: black;
+      text-fill: @roads-text;
       text-spacing: 300;
       text-clip: false;
       text-placement: line;
       text-face-name: @book-fonts;
       text-halo-radius: 0;
+      text-transform: uppercase;
     }
     [zoom >= 14] {
       text-size: 9;
@@ -1740,12 +1743,13 @@
     [zoom >= 13] {
       text-name: "[name]";
       text-size: 8;
-      text-fill: black;
+      text-fill: @roads-text;
       text-spacing: 300;
       text-clip: false;
       text-placement: line;
       text-face-name: @book-fonts;
       text-halo-radius: 0;
+      text-transform: uppercase;
     }
     [zoom >= 14] {
       text-size: 9;
@@ -1758,12 +1762,13 @@
     [zoom >= 15] {
       text-name: "[name]";
       text-size: 9;
-      text-fill: #000;
+      text-fill: @roads-text;
       text-spacing: 300;
       text-clip: false;
       text-placement: line;
       text-face-name: @book-fonts;
       text-halo-radius: 0;
+      text-transform: uppercase;
     }
     [zoom >= 17] {
       text-size: 11;
@@ -1774,27 +1779,30 @@
     [zoom >= 13] {
       text-name: "[name]";
       text-size: 9;
-      text-fill: #000;
+      text-fill: @roads-text;
       text-spacing: 300;
       text-clip: false;
       text-placement: line;
       text-face-name: @book-fonts;
       text-halo-radius: 1;
+      text-transform: uppercase;
     }
     [zoom >= 16] {
       text-size: 11;
     }
   }
-  [highway = 'residential'],
-  [highway = 'unclassified'] {
+
+  [highway != ''] {
     [zoom >= 15] {
       text-name: "[name]";
       text-size: 8;
+      text-fill: @roads-text;
       text-spacing: 300;
       text-clip: false;
       text-placement: line;
       text-halo-radius: 1;
       text-face-name: @book-fonts;
+      text-transform: uppercase;
     }
     [zoom >= 16] {
       text-size: 9;

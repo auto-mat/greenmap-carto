@@ -1,3 +1,5 @@
+@island-text: #2A3E92;
+
 .points {
   [amenity = 'bench'][zoom >= 17]::amenity {
     point-file: url('symbols/bench.png');
@@ -42,7 +44,7 @@
 .text {
   [place = 'island'][zoom >= 12]::place {
     text-name: "[name]";
-    text-fill: #000;
+    text-fill: @island-text;
     text-size: 9;
     text-face-name: @oblique-fonts;
     text-halo-radius: 1;

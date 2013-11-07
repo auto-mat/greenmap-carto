@@ -2092,7 +2092,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "      (select way,highway,case when short_name is not null then short_name else name end as name\n       from planet_osm_line\n       where waterway IS NULL\n         and leisure IS NULL\n         and landuse IS NULL\n         and name is not null\n      ) as roads",
+        "table": "      (select way,highway,case when short_name is not null then short_name else name end as name\n       from planet_osm_line\n       where waterway IS NULL\n         and leisure IS NULL\n         and landuse IS NULL\n         and name is not null\n      and (tunnel is null or highway not in ('primary', 'secondary', 'tertiary', 'trunk', 'motorway', 'primary_link', 'secondary_link', 'tertiary_link', 'trunk_link', 'motorway_link'))\n       and (access is null or access not in ('private', 'no') or foot in ('yes', 'designated', '1', 'true'))\n      ) as roads",
         "extent": "-20037508,-19929239,20037508,19929239",
         "key_field": "",
         "geometry_field": "way",

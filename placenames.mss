@@ -1,8 +1,10 @@
+@placenames-text: #2A3E92;
+
 #continent {
   [place = 'continent'][zoom >= 1][zoom < 3] {
     text-name: "[name]";
     text-size: 10;
-    text-fill: #9d6c9d;
+    text-fill: @placenames-text;
     text-face-name: @book-fonts;
     text-halo-radius: 1;
     text-wrap-width: 20;
@@ -13,7 +15,7 @@
   [place = 'country'][zoom >= 2][zoom < 6] {
     text-name: "[name]";
     text-size: 8;
-    text-fill: #9d6c9d;
+    text-fill: @placenames-text;
     text-face-name: @book-fonts;
     text-halo-radius: 1;
     text-wrap-width: 20;
@@ -27,7 +29,7 @@
   [place = 'state'][zoom >= 4][zoom < 9] {
     text-name: "[ref]";
     text-size: 8;
-    text-fill: #9d6c9d;
+    text-fill: @placenames-text;
     text-face-name: @oblique-fonts;
     text-halo-radius: 1;
     text-wrap-width: 0;
@@ -44,7 +46,7 @@
   [zoom >= 5][zoom < 15] {
     text-name: "[name]";
     text-size: 9;
-    text-fill: #000;
+    text-fill: @placenames-text;
     text-face-name: @book-fonts;
     text-halo-radius: 1;
     [zoom >= 6] {
@@ -61,7 +63,7 @@
     [zoom >= 6][zoom < 15] {
       text-name: "[name]";
       text-size: 8;
-      text-fill: #000;
+      text-fill: @placenames-text;
       text-face-name: @book-fonts;
       text-halo-radius: 1;
       [zoom >= 9] {
@@ -79,7 +81,7 @@
     [zoom >= 9] {
       text-name: "[name]";
       text-size: 8;
-      text-fill: #000;
+      text-fill: @placenames-text;
       text-face-name: @book-fonts;
       text-halo-radius: 1;
       text-wrap-width: 20;
@@ -89,7 +91,7 @@
     }
     [zoom >= 14] {
       text-size: 14;
-      text-fill: #777777;
+      text-fill: @placenames-text;
     }
   }
 }
@@ -98,12 +100,13 @@
   [place = 'suburb'][zoom >= 12] {
     text-name: "[name]";
     text-size: 10;
-    text-fill: #000;
+    text-fill: @placenames-text;
     text-face-name: @book-fonts;
     text-halo-radius: 1;
+    text-transform: uppercase;
     [zoom >= 14] {
       text-size: 13;
-      text-fill: #777777;
+      text-fill: @placenames-text;
     }
   }
 }
@@ -113,12 +116,12 @@
     [zoom >=12] {
       text-name: "[name]";
       text-size: 9;
-      text-fill: #000;
+      text-fill: @placenames-text;
       text-face-name: @book-fonts;
       text-halo-radius: 1;
       [zoom >= 15] {
         text-size: 12;
-        text-fill: #777777;
+        text-fill: @placenames-text;
       }
     }
   }
@@ -132,13 +135,13 @@
     [zoom >= 14] {
       text-name: "[name]";
       text-size: 8;
-      text-fill: #000;
+      text-fill: @placenames-text;
       text-face-name: @book-fonts;
       text-halo-radius: 1;
     }
     [zoom >= 16] {
       text-size: 11;
-      text-fill: #777777;
+      text-fill: @placenames-text;
     }
   }
 }

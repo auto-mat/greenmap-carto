@@ -58,6 +58,8 @@
 @barrier: #444;
 @barrier-width: 1;
 
+@area-text: #2A3E92;
+
 #landcover {
  [feature = 'leisure_swimming_pool'][zoom >= 14] {
     polygon-fill: @water-color;
@@ -424,7 +426,7 @@
   [zoom >= 17] {
     text-name: "[name]";
     text-size: 10;
-    text-fill: #000033;
+    text-fill: @area-text;
     text-face-name: @book-fonts;
     text-halo-radius: 1;
     text-wrap-width: 20;
