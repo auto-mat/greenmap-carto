@@ -239,7 +239,7 @@
   [feature = 'highway_footway'],
   [feature = 'highway_path'] {
     [zoom >= 14] {
-      line-color: grey;
+      line-color: @pedestrian-casing;
       line-width: 1;
     }
   }
@@ -285,7 +285,7 @@
   [feature = 'highway_footway'],
   [feature = 'highway_path'] {
     [zoom >= 14] {
-      polygon-fill: #ededed;
+      polygon-fill: @pedestrian-fill;
     }
   }
 
@@ -887,16 +887,6 @@
     line-cap: round;
   }
 
-  [feature = 'highway_pedestrian'][zoom >= 13] {
-    line-width: 1.5;
-    line-color: @pedestrian-fill;
-    line-join: round;
-    line-cap: round;
-    [zoom >= 14] { line-width: 3; }
-    [zoom >= 15] { line-width: 5.5; }
-    [zoom >= 16] { line-width: 8; }
-  }
-
   [feature = 'highway_platform'] {
     [zoom >= 16] {
       line-join: round;
@@ -928,6 +918,16 @@
   }
 
   ::footway {
+  [feature = 'highway_pedestrian'][zoom >= 13] {
+    line-width: 1.5;
+    line-color: @pedestrian-fill;
+    line-join: round;
+    line-cap: round;
+    [zoom >= 14] { line-width: 3; }
+    [zoom >= 15] { line-width: 5.5; }
+    [zoom >= 16] { line-width: 8; }
+  }
+
   [feature = 'highway_bridleway'],
   [feature = 'highway_path'][horse = 'designated'] {
     [zoom >= 13][tunnel != 'yes'] {
@@ -1385,7 +1385,7 @@
     [feature = 'highway_path'][foot = 'designated'] {
       [zoom >= 14] {
         line-width: 4.5;
-        line-color: @footway-casing;
+        line-color: @footway-fill;
         line-join: round;
         line-cap: round;
       }
