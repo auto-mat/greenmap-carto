@@ -135,6 +135,9 @@
       text-fill: @color_bus_stop_text;
       text-face-name: @bold-fonts;
     }
+    [zoom >= 16] {
+       text-size: 10;
+    }
   }
 }
 
