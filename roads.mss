@@ -1238,7 +1238,7 @@
     [feature = 'highway_path'][bicycle = 'designated'] {
       [zoom >= 14] {
         line-width: 4;
-        line-color: @cycleway-casing;
+        line-color: @footway-fill;
         line-join: round;
         line-cap: round;
       }
@@ -1247,7 +1247,7 @@
     [feature = 'highway_path'] {
       [zoom >= 14] {
         line-width: 2.5;
-        line-color: @path-casing;
+        line-color: @footway-fill;
         line-join: round;
         line-cap: round;
       }
