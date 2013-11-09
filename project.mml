@@ -1436,6 +1436,30 @@
     {
       "geometry": "linestring",
       "extent": [
+        11.678564020870953,
+        48.178934960791715,
+        19.04082667729986,
+        51.13288614192811
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,highway,horse,bicycle,foot,construction,aeroway,tram,\n       case when tunnel in ('yes','true','1') then 'yes'::text else 'no'::text end as tunnel,\n       case when bridge in ('yes','true','1','viaduct') then 'yes'::text else bridge end as bridge,\n       case when railway in ('spur','siding')\n              or (railway='rail' and service in ('spur','siding','yard'))\n            then 'spur-siding-yard'::text else railway end as railway,\n       case when service in ('parking_aisle','drive-through','driveway') then 'INT-minor'::text else service end as service\n       from planet_osm_line\n       where (highway is not null\n          or aeroway in ('runway','taxiway')\n          or railway in ('light_rail','narrow_gauge','funicular','rail','subway','tram','spur','siding','platform','disused','abandoned','construction','miniature','turntable'))\n         and (access is null or access not in ('private', 'no') or foot in ('yes', 'designated', '1', 'true'))\n       order by z_order) as roads",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1300051.8,6136675.03,2119615.13,6644833.49",
+        "dbname": "gis"
+      },
+      "id": "footway-over-dots",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "footway-over-dots"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
         -179.99999692067183,
         -84.96651228427099,
         179.99999692067183,
@@ -1455,30 +1479,6 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "trams"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        11.678564020870953,
-        48.178934960791715,
-        19.04082667729986,
-        51.13288614192811
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(select way,highway,horse,bicycle,foot,construction,aeroway,tram,\n       case when tunnel in ('yes','true','1') then 'yes'::text else 'no'::text end as tunnel,\n       case when bridge in ('yes','true','1','viaduct') then 'yes'::text else bridge end as bridge,\n       case when railway in ('spur','siding')\n              or (railway='rail' and service in ('spur','siding','yard'))\n            then 'spur-siding-yard'::text else railway end as railway,\n       case when service in ('parking_aisle','drive-through','driveway') then 'INT-minor'::text else service end as service\n       from planet_osm_line\n       where (highway is not null\n          or aeroway in ('runway','taxiway')\n          or railway in ('light_rail','narrow_gauge','funicular','rail','subway','tram','spur','siding','platform','disused','abandoned','construction','miniature','turntable'))\n         and (access is null or access not in ('private', 'no') or foot in ('yes', 'designated', '1', 'true'))\n       order by z_order) as roads",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "1300051.8,6136675.03,2119615.13,6644833.49",
-        "dbname": "gis"
-      },
-      "id": "footway-over-dots",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "footway-over-dots"
     },
     {
       "geometry": "linestring",
