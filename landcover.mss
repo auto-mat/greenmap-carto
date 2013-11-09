@@ -1,13 +1,13 @@
 // --- Parks, woods, other green things ---
 
-@forest: #73c82c;
+@forest: #8dc56c;
 @forest-symbol-opacity: 0.3;
 @grass: #73c82c; // also meadow, common, garden, village_green, conservation
 @golf_course: #b5e3b5;
 @natural: #c6e4b4; // also grassland
 @park: #73c82c; // also recreation_ground
 @park-opacity: 1;
-@wood: #73c82c;
+@wood: #8dc56c;
 @vineyard: #73c82c;
 @vineyard-symbol-opacity: 0.3;
 @orchard: #73c82c;
