@@ -1,5 +1,5 @@
 #interpolation {
-  [zoom >= 17] {
+  [zoom >= 18] {
     line-color: #888;
     line-width: 1;
     line-dasharray: 2,4;
@@ -7,7 +7,7 @@
 }
 
 #housenumbers {
-  [zoom >= 17] {
+  [zoom >= 18] {
     text-name: "[addr:housenumber]";
     text-placement: interior;
     text-min-distance: 1;
@@ -19,7 +19,7 @@
 }
 
 #housenames {
-  [zoom >= 17] {
+  [zoom >= 18] {
     text-name: "[addr:housename]";
     text-placement: interior;
     text-wrap-width: 20;
