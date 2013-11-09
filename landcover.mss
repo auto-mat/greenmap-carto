@@ -3,6 +3,7 @@
 @forest: #8dc56c;
 @forest-symbol-opacity: 0.3;
 @grass: #73c82c; // also meadow, common, garden, village_green, conservation
+@garden: #73c82c;
 @golf_course: #b5e3b5;
 @natural: #c6e4b4; // also grassland
 @park: #73c82c; // also recreation_ground
@@ -194,7 +195,7 @@
   }
 
   [feature = 'leisure_garden'][zoom >= 10] {
-    polygon-fill: @grass;
+    polygon-fill: @garden;
   }
 
   [feature = 'leisure_golf_course'][zoom >= 10] {
