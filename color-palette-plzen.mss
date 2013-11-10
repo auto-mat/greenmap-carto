@@ -1,0 +1,13 @@
+@forest: #cdde87;
+@cemetery: #b3e3b7;
+@scrub: #b3e3b7;
+@orchard: #b3e3b7;
+@vineyard: #b3e3b7;
+@village_green: #b3e3b7;
+@allotments: #b3e3b7;
+@grass: #73c82c;
+@garden: #73c82c;
+@park: #73c82c;
+@orchard: #73c82c;
+@scrub: #73c82c;
+@zoo: #73c82c;
