@@ -55,7 +55,7 @@
 @retail: #f1dada;
 @residential: #ddd;
 @sand: #ffdf88;
-@school: #f0f0d8; // also university, college, hospital, kindergarten
+@school: #d0d0d0; // also university, college, hospital, kindergarten
 @barrier: #444;
 @barrier-width: 1;
 
