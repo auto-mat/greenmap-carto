@@ -1,13 +1,3 @@
-@color_bus_stop_text: #0092DA;
-@color_bus_site: #0092DA;
-@color_tram_stop_text: #DA1B8A;
-@color_tram_site: #DA1B8A;
-@color_station_text: black;
-@color_halt_text: black;
-@color_subway_station_text: #7981B0;
-@color_station_disused_text: grey;
-
-
 .stations {
   [railway = 'subway_entrance'][zoom >= 16] {
     point-file: url('symbols/SVG/subway_entrance.svg');
@@ -20,10 +10,8 @@
   [railway = 'station'][zoom >= 12] {
     point-file: url('symbols/halt.png');
     point-placement: interior;
-    [zoom >= 13] {
-      point-file: url('symbols/station_small.png');
-    }
     [zoom >= 14] {
+      point-file: url('symbols/station_small.png');
       text-name: "[name]";
       text-face-name: @bold-fonts;
       text-size: 9;
@@ -49,12 +37,10 @@
       point-file: url('symbols/station_disused.png');
     }
 
-    [transport = 'subway']{
+    [transport = 'subway'][zoom >= 12]{
       point-allow-overlap: true;
       point-file: url('symbols/SVG/subway_station.svg');
-      [zoom >= 12] {
-         point-transform: "scale(0.4)";
-      }
+      point-transform: "scale(0.4)";
       [zoom >= 13] {
          point-transform: "scale(1)";
       }
@@ -96,11 +82,9 @@
     }
   }
 
-  [railway = 'tram_stop']{
+  [railway = 'tram_stop'][zoom >= 14] {
     point-allow-overlap: true;
-    [zoom >= 14] {
-      point-file: url('symbols/tram_stop.png');
-    }
+    point-file: url('symbols/tram_stop.png');
     [zoom >= 15] {
       point-file: url('symbols/tram_stop_small.png');
     }

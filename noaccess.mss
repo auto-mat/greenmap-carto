@@ -1,9 +1,3 @@
-@no-access: white;
-@opacity-no-access: 0.6;
-
-@paid-access: white;
-@opacity-paid-access: 0.3;
-
 #no_access {
    polygon-fill: @no-access;
    polygon-opacity: @opacity-no-access;
