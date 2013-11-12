@@ -1,13 +1,3 @@
-@color_bus_stop_text: #0092DA;
-@color_bus_site: #0092DA;
-@color_tram_stop_text: #DA1B8A;
-@color_tram_site: #DA1B8A;
-@color_station_text: black;
-@color_halt_text: black;
-@color_subway_station_text: #7981B0;
-@color_station_disused_text: grey;
-
-
 .stations {
   [railway = 'subway_entrance'][zoom >= 16] {
     point-file: url('symbols/SVG/subway_entrance.svg');

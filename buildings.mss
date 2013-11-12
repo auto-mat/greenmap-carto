@@ -1,5 +1,3 @@
-@color-buildings: #fcbcc5;
-
 #buildings {
   [building != ''][zoom >= 12] {
     polygon-fill: @color-buildings;

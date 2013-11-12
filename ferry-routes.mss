@@ -1,5 +1,3 @@
-@ferry-route: blue;
-
 #ferry-routes {
   [zoom >= 7] {
     line-color: @ferry-route;

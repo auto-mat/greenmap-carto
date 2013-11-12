@@ -1,5 +1,3 @@
-@placenames-text: #2A3E92;
-
 #continent {
   [place = 'continent'][zoom >= 1][zoom < 3] {
     text-name: "[name]";

@@ -1,5 +1,3 @@
-@island-text: #2A3E92;
-
 .points {
   [amenity = 'bench'][zoom >= 17]::amenity {
     point-file: url('symbols/bench.png');

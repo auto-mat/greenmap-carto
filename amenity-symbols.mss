@@ -1,6 +1,3 @@
-@tree: #4EAF6A;
-@tree-row-casing: white;
-
 #tree-rows[zoom >= 16] {
    line-join: round;
    line-cap: round;
