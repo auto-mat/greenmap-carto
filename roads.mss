@@ -1556,25 +1556,8 @@
       text-size: 11;
     }
   }
-  [highway = 'proposed'],
-  [highway = 'construction'] {
-    [zoom >= 13] {
-      text-name: "[name]";
-      text-size: 9;
-      text-fill: @roads-text;
-      text-spacing: 300;
-      text-clip: false;
-      text-placement: line;
-      text-face-name: @book-fonts;
-      text-halo-radius: 1;
-      text-transform: uppercase;
-    }
-    [zoom >= 16] {
-      text-size: 11;
-    }
-  }
 
-  [highway != ''] {
+  [highway != ''][highway != 'proposed'][highway != 'construction'] {
     [zoom >= 15] {
       text-name: "[name]";
       text-size: 8;
