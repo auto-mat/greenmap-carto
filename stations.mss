@@ -47,12 +47,10 @@
       point-file: url('symbols/station_disused.png');
     }
 
-    [transport = 'subway']{
+    [transport = 'subway'][zoom >= 12]{
       point-allow-overlap: true;
       point-file: url('symbols/SVG/subway_station.svg');
-      [zoom >= 12] {
-         point-transform: "scale(0.4)";
-      }
+      point-transform: "scale(0.4)";
       [zoom >= 13] {
          point-transform: "scale(1)";
       }
