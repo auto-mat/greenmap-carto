@@ -1,3 +1,25 @@
+@tree: #4EAF6A;
+@tree-row-casing: white;
+
+#tree-rows[zoom >= 16] {
+   line-join: round;
+   line-cap: round;
+   line-color: @tree-row-casing;
+   line-dasharray: 1,4;
+   line-width: 4;
+   b/line-join: round;
+   b/line-cap: round;
+   b/line-color: @tree;
+   b/line-dasharray: 1,4;
+   b/line-width: 3;
+   [zoom >= 17] {
+      line-width: 5;
+      line-dasharray: 1,5;
+      b/line-width: 4;
+      b/line-dasharray: 1,5;
+   }
+}
+
 .symbols {
   [aeroway = 'airport'][zoom >= 9][zoom < 13]::aeroway {
     [zoom < 11] {
