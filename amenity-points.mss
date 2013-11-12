@@ -8,13 +8,13 @@
 
   [amenity = 'bus_stop']::amenity,
   [highway = 'bus_stop']::highway {
-    point-allow-overlap: true;
-    [zoom >= 13] {
+    [zoom >= 14] {
+      point-allow-overlap: true;
       point-file: url('symbols/bus_stop_small.png');
       point-placement: interior;
-    }
-    [zoom >= 17] {
-      point-file: url('symbols/bus_stop.p.12.png');
+        [zoom >= 16] {
+          point-file: url('symbols/bus_stop.p.12.png');
+        }
     }
   }
 

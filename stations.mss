@@ -20,10 +20,8 @@
   [railway = 'station'][zoom >= 12] {
     point-file: url('symbols/halt.png');
     point-placement: interior;
-    [zoom >= 13] {
-      point-file: url('symbols/station_small.png');
-    }
     [zoom >= 14] {
+      point-file: url('symbols/station_small.png');
       text-name: "[name]";
       text-face-name: @bold-fonts;
       text-size: 9;
@@ -96,11 +94,9 @@
     }
   }
 
-  [railway = 'tram_stop']{
+  [railway = 'tram_stop'][zoom >= 14] {
     point-allow-overlap: true;
-    [zoom >= 14] {
-      point-file: url('symbols/tram_stop.png');
-    }
+    point-file: url('symbols/tram_stop.png');
     [zoom >= 15] {
       point-file: url('symbols/tram_stop_small.png');
     }
