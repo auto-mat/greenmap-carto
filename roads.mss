@@ -822,7 +822,7 @@
     [feature = 'railway_light_rail'],
     [feature = 'railway_monorail'],
     [feature = 'railway_funicular'] {
-      [zoom >= 10] {
+      [zoom >= 8] {
          line-width: 0.75;
          line-color: @color-railway;
          line-join: round;
@@ -1318,7 +1318,7 @@
       [feature = 'railway_light_rail'],
       [feature = 'railway_narrow_gauge'],
       [feature = 'railway_rail'] {
-      [zoom >= 10] {
+      [zoom >= 8] {
          line-width: 0.75;
          line-color: @color-railway;
          line-join: round;
@@ -1451,27 +1451,6 @@
       [zoom >= 11] { line-width: 2; }
     }
   }
-
-    [feature = 'railway_rail'][zoom >= 6][zoom < 13] {
-      line-width: 0.6;
-      line-color: #aaa;
-      [zoom >= 9] { line-width: 1; }
-      [zoom >= 10] { line-width: 2; }
-      [tunnel = 'yes'] {
-        line-dasharray: 5,2;
-      }
-    }
-
-    [feature = 'railway_tram'],
-    [feature = 'railway_light_rail'],
-    [feature = 'railway_funicular'],
-    [feature = 'railway_narrow_gauge'] {
-      [zoom >= 8][zoom < 13] {
-        line-width: 1;
-        line-color: #ccc;
-        [zoom >= 10] { line-color: #aaa }
-      }
-    }
 }
 
 #footway-over-dots{
@@ -1490,7 +1469,7 @@
 }
 
 #trams {
-  [railway = 'tram'][zoom >= 13] {
+  [railway = 'tram'][zoom >= 11] {
     line-color: @color-tram;
     line-width: 1;
     [zoom >= 15] {
