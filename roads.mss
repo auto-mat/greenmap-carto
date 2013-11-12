@@ -782,16 +782,8 @@
   }
 
   [feature = 'highway_footway'],
-  [feature = 'highway_path'][foot = 'designated'] {
-    [zoom >= 13][tunnel != 'yes'] {
-      line-width: 2;
-      line-color: @footway-fill;
-      line-cap: round;
-      line-join: round;
-    }
-  }
-
   [feature = 'highway_cycleway'],
+  [feature = 'highway_path'][foot = 'designated'],
   [feature = 'highway_path'][bicycle = 'designated'] {
     [zoom >= 13][tunnel != 'yes'] {
       line-width: 2;
@@ -1323,18 +1315,6 @@
       [zoom >= 16] { line-width: 6; }
     }
 
-    [feature = 'highway_pedestrian'] {
-      [zoom >= 13] {
-        line-width: 1.5;
-        line-color: @pedestrian-fill;
-        line-join: round;
-        line-cap: round;
-      }
-      [zoom >= 14] { line-width: 3; }
-      [zoom >= 15] { line-width: 5.5; }
-      [zoom >= 16] { line-width: 8; }
-    }
-
       [feature = 'railway_light_rail'],
       [feature = 'railway_narrow_gauge'],
       [feature = 'railway_rail'] {
@@ -1365,6 +1345,62 @@
       line-width: 4;
       line-color: @taxiway-fill;
       [zoom >= 15] { line-width: 6; }
+    }
+  }
+  
+  ::footway {
+    [feature = 'highway_pedestrian'][zoom >= 13] {
+      line-width: 1.5;
+      line-color: @pedestrian-fill;
+      line-join: round;
+      line-cap: round;
+      [zoom >= 14] { line-width: 3; }
+      [zoom >= 15] { line-width: 5.5; }
+      [zoom >= 16] { line-width: 8; }
+    }
+
+    [feature = 'highway_bridleway'],
+    [feature = 'highway_path'][horse = 'designated'] {
+      [zoom >= 13] {
+        line-width: 3;
+        line-color: @footway-fill;
+        line-join: round;
+        line-cap: round;
+      }
+    }
+
+  [feature = 'highway_footway'],
+  [feature = 'highway_cycleway'],
+  [feature = 'highway_path'][foot = 'designated'],
+  [feature = 'highway_path'][bicycle = 'designated'] {
+      [zoom >= 13] {
+        line-width: 2;
+        line-color: @footway-fill;
+        line-join: round;
+        line-cap: round;
+      }
+    }
+
+    /*
+     * The above defininitions should override this when needed
+     * given the specitivity precedence.
+     */
+    [feature = 'highway_path'] {
+      [zoom >= 13] {
+        line-width: 1.0;
+        line-color: @path-fill;
+        line-cap: round;
+        line-join: round;
+      }
+    }
+
+    [feature = 'highway_track'] {
+      [zoom >= 13] {
+        line-width: 3;
+        line-color: @footway-fill;
+        line-join: round;
+        line-cap: round;
+      }
     }
   }
 }
