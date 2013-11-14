@@ -174,7 +174,7 @@
   }
 
   [feature = 'landuse_village_green'][zoom >= 11] {
-    polygon-fill: @grass;
+    polygon-fill: @village-green;
   }
 
   [feature = 'landuse_retail'][zoom >= 10] {

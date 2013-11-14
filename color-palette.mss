@@ -134,7 +134,8 @@
 // --- Parks, woods, other green things ---
 @forest: #8dc56c;
 @forest-symbol-opacity: 0.3;
-@grass: #73c82c; // also meadow, common, garden, village_green, conservation
+@grass: #73c82c; // also meadow, common, garden, conservation
+@village-green: @grass;
 @garden: #73c82c;
 @golf_course: #b5e3b5;
 @natural: #c6e4b4; // also grassland
