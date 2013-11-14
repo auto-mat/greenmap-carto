@@ -3,7 +3,7 @@
 @scrub: #b3e3b7;
 @orchard: #b3e3b7;
 @vineyard: #b3e3b7;
-@village_green: #b3e3b7;
+@village-green: #b3e3b7;
 @allotments: #b3e3b7;
 @grass: #73c82c;
 @garden: #73c82c;
