@@ -268,7 +268,7 @@
       line-width: @secondary-width-z12 + 1;
       line-color: @secondary-casing;
       line-cap: round;
-      line-join: round;
+      line-dasharray: @residential-casing-dasharray;
     }
     [zoom >= 13] { line-width: @secondary-width-z13 + 1.5; }
     [zoom >= 15] { line-width: @secondary-width-z15 + 1.8; }
@@ -280,7 +280,7 @@
       line-width: 6;
       line-color: @tertiary-casing;
       line-cap: round;
-      line-join: round;
+      line-dasharray: @residential-casing-dasharray;
     }
     [zoom >= 14] { line-width: 7.5; }
     [zoom >= 15] { line-width: 11; }
@@ -327,7 +327,7 @@
       line-width: @secondary-width-z12 + 1;
       line-color: @secondary-casing;
       line-join: round;
-      line-cap: round;
+      line-dasharray: @residential-casing-dasharray;
     }
     [zoom >= 13] { line-width: @secondary-width-z13 + 1.5; }
     [zoom >= 15] { line-width: @secondary-width-z15 + 1.8; }
@@ -354,7 +354,7 @@
         line-width: 3;
         line-color: @residential-casing;
         line-join: round;
-        line-cap: round;
+        line-dasharray: @residential-casing-dasharray;
       }
       [zoom >= 14] { line-width: @residential-width-z14 + 1.5; }
       [zoom >= 15] { line-width: @residential-width-z15 + 1.8; }
@@ -537,6 +537,7 @@
     [zoom >= 10][zoom < 13] {
       line-width: 1;
       line-color: @residential-casing;
+      line-dasharray: 4,4;
     }
   }
 
@@ -589,6 +590,7 @@
   [feature = 'highway_service'][service = 'INT-normal'][zoom >= 13] {
     line-width: 1;
     line-color: @residential-casing;
+     line-dasharray: 4,4;
     [zoom >= 14] {
       line-join: round;
       line-cap: round;

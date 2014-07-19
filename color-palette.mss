@@ -84,6 +84,8 @@
 @bridleway-casing: @default-casing;
 @track-casing: @default-casing;
 
+@residential-casing-dasharray: 0;
+
 @permissive-marking: #cf9;
 @destination-marking: #c2e0ff;
 @private-marking: #efa9a9;
@@ -133,7 +135,7 @@
 /* ------------------------ PLACENAMES -------------------------- */
 // --- Parks, woods, other green things ---
 @forest: #8dc56c;
-@forest-symbol-opacity: 0.3;
+@forest-symbol-opacity: 0.0;
 @grass: #73c82c; // also meadow, common, garden, conservation
 @village-green: @grass;
 @garden: #73c82c;
@@ -169,7 +171,7 @@
 @barracks: #ff8f8f;
 @campsite: #ccff99; // also caravan_site, picnic_site
 @cemetery: #aacbaf; // also grave_yard
-@cemetery-symbol-opacity: 0.3;
+@cemetery-symbol-opacity: 0.0;
 @construction: #d0d0d0;
 @construction-opacity: 1;
 @commercial: #efc8c8;

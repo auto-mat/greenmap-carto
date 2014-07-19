@@ -1,16 +1,16 @@
 @voda: #62767F;
-@hodnotna-zelen: #4F6B44;
-@doplnkova-zelen: #81A86F;
-@nepristupna-zelen: #B3DBA5;
-@lesy: #8D9948;
-@prostupna-krajina: #B4BC68;
-@neprostupna-krajina: #EAE9BB;
-@verejna-budova: #86689B;
-@hodnotne-prostranstvi: #BCA6CC;
-@verejne-pristupny-prostor: #ECE1F4;
+@hodnotna-zelen: #80A372;
+@doplnkova-zelen: #ABC491;
+@nepristupna-zelen: #dde7d2;
+@lesy: #bac191;
+@prostupna-krajina: #e0e0af;
+@neprostupna-krajina: #f4f2d7;
+@verejna-budova: #7c7c7c;
+@hodnotne-prostranstvi: #c2aed1;
+@verejne-pristupny-prostor: #F0E8F7;
 @verejne-pristupny-prostor-linka: #333333;
-@zeleznice: #808080;
-@domy: #B3B3B3;
+@zeleznice: #d3d3d3;
+@domy: #b3b3b3;
 @nepristupny-prostor: #F2F2F2;
 @verejna-doprava: #9B466D;
 
@@ -39,6 +39,7 @@
 @pedestrian-fill: @hodnotne-prostranstvi;
 @living-street-fill: @hodnotne-prostranstvi;
 @land-color: @verejne-pristupny-prostor;
+@default-casing: @verejne-pristupny-prostor-linka;
 
 @motorway-fill: @verejne-pristupny-prostor;
 @trunk-fill: @verejne-pristupny-prostor;
@@ -61,3 +62,5 @@
 @island-text: black;
 @placenames-text: black;
 @area-text: black;
+
+@residential-casing-dasharray: 4,4;
