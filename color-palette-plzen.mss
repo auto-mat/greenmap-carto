@@ -9,7 +9,8 @@
 @hodnotne-prostranstvi: #c2aed1;
 @verejne-pristupny-prostor: #F0E8F7;
 @verejne-pristupny-prostor-linka: #333333;
-@zeleznice: #d3d3d3;
+@zeleznice: #7c7c7c;
+@industrialni: #d3d3d3;
 @domy: #b3b3b3;
 @nepristupny-prostor: #F2F2F2;
 @verejna-doprava: #9B466D;
@@ -29,6 +30,8 @@
 @orchard: @doplnkova-zelen;
 @scrub: @doplnkova-zelen;
 @zoo: @doplnkova-zelen;
+
+@industrial: @industrialni;
 
 // mapování Plzeňského stylu
 @water-color: @voda;
