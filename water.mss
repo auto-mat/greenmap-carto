@@ -245,7 +245,7 @@
     text-name: "[name]";
     text-face-name: @book-fonts;
     text-placement: line;
-    text-fill: #6699cc;
+    text-fill: @water-color;
     text-spacing: 400;
     text-size: 9;
     text-halo-radius: 1;
@@ -259,14 +259,14 @@
     text-halo-radius: 1;
     text-size: 8;
     text-placement: line;
-    text-fill: #6699cc;
+    text-fill: @water-color;
   }
 
   [waterway = 'stream'][zoom >= 15] {
     text-name: "[name]";
     text-size: 8;
     text-face-name: @book-fonts;
-    text-fill: #6699cc;
+    text-fill: @water-color;
     text-halo-radius: 1;
     text-spacing: 600;
     text-placement: line;
@@ -278,7 +278,7 @@
       text-name: "[name]";
       text-face-name: @book-fonts;
       text-size: 8;
-      text-fill: #6699cc;
+      text-fill: @water-color;
       text-spacing: 600;
       text-placement: line;
       text-halo-radius: 1;
@@ -288,7 +288,7 @@
   [waterway = 'canal'][zoom >= 14] {
     text-name: "[name]";
     text-size: 9;
-    text-fill: #6699cc;
+    text-fill: @water-color;
     text-placement: line;
     text-face-name: @book-fonts;
     text-halo-radius: 1;
