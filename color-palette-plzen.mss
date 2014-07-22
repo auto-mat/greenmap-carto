@@ -75,3 +75,16 @@
 @zoo-symbol-opacity: 0;
 @opacity-pattern-paid-access: 0;
 @opacity-pattern-no-access: 0;
+
+#crossings[zoom >= 16] {
+  point-placement: interior;
+  point-transform: 'rotate([angle])';
+  point-allow-overlap: true;
+  point-ignore-placement: true;
+
+  point-file: url('symbols/SVG/crossing_small_plzen.svg');
+
+  [zoom >= 17] {
+      point-file: url('symbols/SVG/crossing_plzen.svg');
+  }
+}
