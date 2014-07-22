@@ -67,3 +67,11 @@
 @area-text: black;
 
 @residential-casing-dasharray: 4,4;
+@cemetery-symbol-opacity: 0;
+@orchard-symbol-opacity: 0;
+@vineyard-symbol-opacity: 0;
+@scrub-symbol-opacity: 0;
+@forest-symbol-opacity: 0;
+@zoo-symbol-opacity: 0;
+@opacity-pattern-paid-access: 0;
+@opacity-pattern-no-access: 0;
