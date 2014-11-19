@@ -66,6 +66,73 @@
 @placenames-text: black;
 @area-text: black;
 
+
+@motorway-width-z12: 2;
+@trunk-width-z12: 2;
+@primary-width-z12: 2;
+@secondary-width-z12: 2;
+
+@motorway-width-z13: 2;
+@trunk-width-z13: 2;
+@primary-width-z13: 2;
+@secondary-width-z13: 2;
+@tertiary-width-z13: 2;
+@residential-width-z13: 2;
+
+@tertiary-width-z14: 3;
+@residential-width-z14: 3;
+
+@motorway-width-z15: 6.55;
+@trunk-width-z15: 6.5;
+@primary-width-z15: 6.5;
+@secondary-width-z15: 6.5;
+@tertiary-width-z15: 6.5;
+@residential-width-z15: 6.5;
+
+@residential-width-z16: 9.4;
+
+@motorway-width-z17: 13; // shouldn't be narrower than trunk!
+@trunk-width-z17: 13;
+@primary-width-z17: 13;
+@secondary-width-z17: 13;
+@tertiary-width-z17: 13;
+@residential-width-z17: 13;
+
+
+@tertiary-casing-width-z13: 1;
+@tertiary-casing-width-z14: 1;
+@tertiary-casing-width-z15: 1;
+@tertiary-casing-width-z17: 1;
+
+@residential-casing-width-z15: 1;
+@residential-casing-width-z16: 1;
+@residential-casing-width-z17: 1;
+
+@motorway-casing-width-z12: 1;
+@motorway-casing-width-z13: 1;
+@motorway-casing-width-z15: 1;
+@motorway-casing-width-z17: 1;
+
+@trunk-casing-width-z12: 1;
+@trunk-casing-width-z13: 1;
+@trunk-casing-width-z15: 1;
+@trunk-casing-width-z17: 1;
+
+@primary-casing-width-z12: 1;
+@primary-casing-width-z13: 1;
+@primary-casing-width-z15: 1;
+@primary-casing-width-z17: 1;
+
+@secondary-casing-width-z12: 1;
+@secondary-casing-width-z13: 1;
+@secondary-casing-width-z15: 1;
+@secondary-casing-width-z17: 1;
+
+@residential-casing-width-z14: 1;
+@residential-casing-width-z15: 1;
+@residential-casing-width-z16: 1;
+@residential-casing-width-z17: 1;
+
 @residential-casing-dasharray: 0;
 @cemetery-symbol-opacity: 0;
 @orchard-symbol-opacity: 0;

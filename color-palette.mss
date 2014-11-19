@@ -132,6 +132,41 @@
 @tertiary-width-z17: 13;
 @residential-width-z17: 13;
 
+
+@tertiary-casing-width-z13: 1.5;
+@tertiary-casing-width-z14: 1.5;
+@tertiary-casing-width-z15: 1.8;
+@tertiary-casing-width-z17: 2.5;
+
+@residential-casing-width-z15: 1.8;
+@residential-casing-width-z16: 1.8;
+@residential-casing-width-z17: 1.8;
+
+@motorway-casing-width-z12: 1;
+@motorway-casing-width-z13: 1.5;
+@motorway-casing-width-z15: 1.8;
+@motorway-casing-width-z17: 2.5;
+
+@trunk-casing-width-z12: 1;
+@trunk-casing-width-z13: 1.5;
+@trunk-casing-width-z15: 1.8;
+@trunk-casing-width-z17: 2.5;
+
+@primary-casing-width-z12: 1;
+@primary-casing-width-z13: 1.5;
+@primary-casing-width-z15: 1.8;
+@primary-casing-width-z17: 2.5;
+
+@secondary-casing-width-z12: 1;
+@secondary-casing-width-z13: 1.5;
+@secondary-casing-width-z15: 1.8;
+@secondary-casing-width-z17: 2.5;
+
+@residential-casing-width-z14: 1.5;
+@residential-casing-width-z15: 1.8;
+@residential-casing-width-z16: 1.8;
+@residential-casing-width-z17: 2.5;
+
 /* ------------------------ PLACENAMES -------------------------- */
 // --- Parks, woods, other green things ---
 @forest: #8dc56c;
