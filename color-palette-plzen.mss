@@ -133,6 +133,9 @@
 @residential-casing-width-z16: 1;
 @residential-casing-width-z17: 1;
 
+@highway-line-cap: square;
+
+@service-dasharray: 0;
 @residential-casing-dasharray: 0;
 @cemetery-symbol-opacity: 0;
 @orchard-symbol-opacity: 0;

@@ -84,6 +84,9 @@
 @bridleway-casing: @default-casing;
 @track-casing: @default-casing;
 
+@highway-line-cap: round;
+
+@service-dasharray: 4,4;
 @residential-casing-dasharray: 0;
 
 @permissive-marking: #cf9;
