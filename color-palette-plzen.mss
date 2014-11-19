@@ -53,13 +53,13 @@
 @residential-fill: @verejne-pristupny-prostor;
 @service-fill: @verejne-pristupny-prostor;
 @road-fill: @verejne-pristupny-prostor;
-@path-fill: @verejne-pristupny-prostor;
-@footway-fill: @verejne-pristupny-prostor;
+@path-fill: white;
+@footway-fill: white;
 @steps-fill: @verejne-pristupny-prostor;
-@bridleway-fill: @verejne-pristupny-prostor;
-@track-fill: @verejne-pristupny-prostor;
-@track-grade1-fill: @verejne-pristupny-prostor;
-@track-grade2-fill: @verejne-pristupny-prostor;
+@bridleway-fill: white;
+@track-fill: white;
+@track-grade1-fill: white;
+@track-grade2-fill: white;
 
 @roads-text: black;
 @island-text: black;
