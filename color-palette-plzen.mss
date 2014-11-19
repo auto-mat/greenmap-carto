@@ -66,7 +66,7 @@
 @placenames-text: black;
 @area-text: black;
 
-@residential-casing-dasharray: 4,4;
+@residential-casing-dasharray: 0;
 @cemetery-symbol-opacity: 0;
 @orchard-symbol-opacity: 0;
 @vineyard-symbol-opacity: 0;
