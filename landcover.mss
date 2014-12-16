@@ -133,6 +133,9 @@
 
   [feature = 'leisure_garden'][zoom >= 10] {
     polygon-fill: @garden;
+    [access = 'no'] {
+      polygon-fill: @nepristupna-zelen;
+    }
   }
 
   [feature = 'leisure_golf_course'][zoom >= 10] {
@@ -175,6 +178,9 @@
 
   [feature = 'landuse_village_green'][zoom >= 11] {
     polygon-fill: @village-green;
+    [access = 'no'] {
+      polygon-fill: @nepristupna-zelen;
+    }
   }
 
   [feature = 'landuse_retail'][zoom >= 10] {
@@ -326,14 +332,14 @@
     polygon-fill: @track;
     polygon-opacity: @track-opacity;
     line-width: 0.5;
-    line-color: #888;
+    line-color: @track-line;
   }
 
   [leisure = 'pitch'][zoom >= 10] {
     polygon-fill: @pitch;
     polygon-opacity: @pitch-opacity;
     line-width: 0.5;
-    line-color: #888;
+    line-color: @pitch-line;
   }
 }
 

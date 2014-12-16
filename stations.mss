@@ -91,8 +91,6 @@
   }
 }
 
-#bus_stops::bus_stops,
-#bus_sites::bus_sites,
 #tram_sites::tram_sites,
 #stations[railway = 'tram_stop'][in_relation = false]::tram_stops{
   .stations[zoom >= 14],
@@ -112,27 +110,16 @@
     .stations[zoom >= 15]{
       text-dy: -10;
     }
-    #bus_stops{
-      text-dy: 6;
-    }
-    .bus{
-      text-fill: @color_bus_stop_text;
-      text-face-name: @bold-fonts;
-    }
     [zoom >= 16] {
        text-size: 10;
     }
   }
 }
 
-#tram_sites_lines::tram,
-#bus_sites_lines::bus{
+#tram_sites_lines::tram{
   [zoom >= 16] {
     line-opacity: 0.2;
     line-width: 3;
-  .bus {
-      line-color: @color_bus_site;
-    }
   .tram {
       line-color: @color_tram_site;
     }

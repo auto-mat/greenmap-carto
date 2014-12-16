@@ -4,23 +4,6 @@
     point-placement: interior;
   }
 
-  [amenity = 'bus_stop']::amenity,
-  [highway = 'bus_stop']::highway {
-    [zoom >= 14] {
-      point-allow-overlap: true;
-      point-file: url('symbols/bus_stop_small.png');
-      point-placement: interior;
-        [zoom >= 16] {
-          point-file: url('symbols/bus_stop.p.12.png');
-        }
-    }
-  }
-
-  [amenity = 'bus_station'][zoom >= 16]::amenity {
-    point-file: url('symbols/bus_station.n.16.png');
-    point-placement: interior;
-  }
-
   [highway = 'traffic_signals'][zoom >= 17]::highway {
     point-file: url('symbols/SVG/traffic_light.svg');
     point-placement: interior;

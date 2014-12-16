@@ -1,41 +1,56 @@
-@voda: #62767F;
-@hodnotna-zelen: #80A372;
-@doplnkova-zelen: #ABC491;
-@nepristupna-zelen: #dde7d2;
-@lesy: #bac191;
-@prostupna-krajina: #e0e0af;
-@neprostupna-krajina: #f4f2d7;
-@verejna-budova: #7c7c7c;
-@hodnotne-prostranstvi: #c2aed1;
-@verejne-pristupny-prostor: #F0E8F7;
-@verejne-pristupny-prostor-linka: #333333;
-@zeleznice: #7c7c7c;
-@industrialni: #d3d3d3;
-@domy: #b3b3b3;
-@nepristupny-prostor: #F2F2F2;
-@verejna-doprava: #9B466D;
+@voda: #4477aa;
+@hodnotna-zelen: #99cc77;
+@doplnkova-zelen: #bbeeaa;
+@nepristupna-zelen: #d5ddbb;
+@lesy: #99cc77;
+@prostupna-krajina: #bbeeaa;
+@neprostupna-krajina: #d5ddbb;
+@verejna-budova: #ffcc00;
+@hodnotne-prostranstvi: #ffff66;
+@verejne-pristupny-prostor: #ffffff;
+@verejne-pristupny-prostor-linka: #666666;
+@zeleznice: #333333;
+@industrialni: #dddddd;
+@domy: #bbbbbb;
+@domy-okraj: #666666;
+@nepristupny-prostor: #dddddd;
+@verejna-doprava: #993366;
 
 
+// mapování Plzeňského stylu
 @forest: @lesy;
-@cemetery: @doplnkova-zelen;
+@cemetery: @hodnotna-zelen;
 @scrub: @doplnkova-zelen;
-@orchard: @doplnkova-zelen;
+@orchard: @hodnotna-zelen;
 @vineyard: @doplnkova-zelen;
 @village-green: @doplnkova-zelen;
-@allotments: @doplnkova-zelen;
+@allotments: @nepristupna-zelen;
 @grass: @prostupna-krajina;
 @field: @prostupna-krajina;
-@garden: @doplnkova-zelen;
+@garden: @nepristupna-zelen;
 @park: @hodnotna-zelen;
-@orchard: @doplnkova-zelen;
 @scrub: @doplnkova-zelen;
 @zoo: @doplnkova-zelen;
+@playground: @doplnkova-zelen;
+
+// --- sports ---
+
+@stadium: @doplnkova-zelen; // also sports_centre
+@stadium-opacity: 1;
+@track: @doplnkova-zelen;
+@track-line: @domy-okraj;
+@track-opacity: 1;
+@pitch: @doplnkova-zelen;
+@pitch-opacity: 1;
+@pitch-line: @domy-okraj;
 
 @industrial: @industrialni;
 
-// mapování Plzeňského stylu
+@farmyard: @prostupna-krajina;
+@farm: @prostupna-krajina;
 @water-color: @voda;
 @color-buildings: @domy;
+@color-buildings-line: @domy-okraj;
 @color-tram: @verejna-doprava;
 @color-railway: @zeleznice;
 @color-public-building: @verejna-budova;
@@ -146,15 +161,10 @@
 @opacity-pattern-paid-access: 0;
 @opacity-pattern-no-access: 0;
 
-#crossings[zoom >= 16] {
-  point-placement: interior;
-  point-transform: 'rotate([angle])';
-  point-allow-overlap: true;
-  point-ignore-placement: true;
+/* ------------------------ NO ACCESS -------------------------- */
+@no-access: @nepristupny-prostor;
+@opacity-no-access: 1;
 
-  point-file: url('symbols/SVG/crossing_small_plzen.svg');
-
-  [zoom >= 17] {
-      point-file: url('symbols/SVG/crossing_plzen.svg');
-  }
-}
+@paid-access: @nepristupny-prostor;
+@opacity-paid-access: 1;
+@village-green-noaccess: @nepristupna-zelen;

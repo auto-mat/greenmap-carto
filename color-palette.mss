@@ -20,6 +20,7 @@
 
 /* ------------------------ BUILDINS -------------------------- */
 @color-buildings: #fcbcc5;
+@color-buildings-line: #330066;
 
 /* ------------------------ NO ACCESS -------------------------- */
 @no-access: white;
@@ -197,8 +198,10 @@
 @stadium-opacity: 0.3;
 @track: #74dcba;
 @track-opacity: 0.3;
+@track-line: #888;
 @pitch: #8ad3af;
 @pitch-opacity: 0.3;
+@pitch-line: #888;
 
 // --- Other ----
 
