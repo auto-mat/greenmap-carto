@@ -167,3 +167,5 @@
 
 @paid-access: @nepristupny-prostor;
 @opacity-paid-access: 1;
+
+@opacity-residential: 0;

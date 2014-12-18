@@ -72,6 +72,7 @@
 
   [feature = 'landuse_residential'][zoom >= 10] {
     polygon-fill: @residential;
+    polygon-opacity: @opacity-residential;
   }
 
   [feature = 'landuse_garages'][zoom >= 12] {

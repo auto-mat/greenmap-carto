@@ -230,6 +230,7 @@
 @rest_area: #efc8c8; // also services
 @retail: #f1dada;
 @residential: #ddd;
+@opacity-residential: 1;
 @sand: #ffdf88;
 @school: #d0d0d0; // also university, college, hospital, kindergarten
 @barrier: #444;
