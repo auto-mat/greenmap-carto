@@ -133,7 +133,7 @@
 
   [feature = 'leisure_garden'][zoom >= 10] {
     polygon-fill: @garden;
-    [access = 'no'] {
+    [access_aggregation = 'no'] {
       polygon-fill: @nepristupna-zelen;
     }
   }
@@ -178,7 +178,7 @@
 
   [feature = 'landuse_village_green'][zoom >= 11] {
     polygon-fill: @village-green;
-    [access = 'no'] {
+    [access_aggregation = 'no'] {
       polygon-fill: @nepristupna-zelen;
     }
   }
@@ -195,6 +195,9 @@
   [feature = 'landuse_railway'] {
     [zoom >= 10] {
       polygon-fill: @industrial;
+    }
+    [access = 'public'] {
+      polygon-opacity: 0;
     }
   }
 
