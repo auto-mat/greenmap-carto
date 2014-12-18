@@ -24,10 +24,10 @@
 @orchard: @hodnotna-zelen;
 @vineyard: @doplnkova-zelen;
 @village-green: @doplnkova-zelen;
-@allotments: @nepristupna-zelen;
+@allotments: @doplnkova-zelen;
 @grass: @prostupna-krajina;
 @field: @prostupna-krajina;
-@garden: @nepristupna-zelen;
+@garden: @hodnotna-zelen;
 @park: @hodnotna-zelen;
 @scrub: @doplnkova-zelen;
 @zoo: @doplnkova-zelen;
@@ -55,7 +55,7 @@
 @color-railway: @zeleznice;
 @color-public-building: @verejna-budova;
 @pedestrian-fill: @hodnotne-prostranstvi;
-@living-street-fill: @hodnotne-prostranstvi;
+@living-street-fill: @verejne-pristupny-prostor;
 @land-color: @verejne-pristupny-prostor;
 @default-casing: @verejne-pristupny-prostor-linka;
 
@@ -167,4 +167,3 @@
 
 @paid-access: @nepristupny-prostor;
 @opacity-paid-access: 1;
-@village-green-noaccess: @nepristupna-zelen;
