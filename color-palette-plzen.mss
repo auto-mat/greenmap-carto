@@ -24,7 +24,7 @@
 @orchard: @hodnotna-zelen;
 @vineyard: @doplnkova-zelen;
 @village-green: @doplnkova-zelen;
-@allotments: @doplnkova-zelen;
+@allotments: @nepristupna-zelen;
 @grass: @prostupna-krajina;
 @field: @prostupna-krajina;
 @garden: @hodnotna-zelen;
