@@ -5,7 +5,7 @@
     polygon-clip: false;
     [zoom >= 16] {
       line-color: @color-buildings-line;
-      line-width: 0.2;
+      line-width: 0.4;
       [amenity = 'public_building'] {
         line-width: 0.5;
       }
