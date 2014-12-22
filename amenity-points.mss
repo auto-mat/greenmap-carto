@@ -5,7 +5,7 @@
   }
 
   [highway = 'traffic_signals'][zoom >= 17]::highway {
-    point-file: url('symbols/SVG/traffic_light.svg');
+    point-file: url('symbols/traffic_light.png');
     point-placement: interior;
   }
 

@@ -10,11 +10,4 @@
   [zoom >= 17] {
       point-file: url('symbols/SVG/crossing.svg');
   }
-
-  [crossing='traffic_signals'][zoom >= 16] {
-    point-file: url('symbols/SVG/crossing_lights_small.svg');
-  }
-  [crossing='traffic_signals'][zoom >= 17] {
-      point-file: url('symbols/SVG/crossing_lights.svg');
-  }
 }
