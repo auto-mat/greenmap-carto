@@ -15,6 +15,7 @@
 @domy-okraj: #666666;
 @nepristupny-prostor: #dddddd;
 @verejna-doprava: #993366;
+@cesta: #dfdfdf;
 
 
 // mapování Plzeňského stylu
@@ -68,13 +69,13 @@
 @residential-fill: @verejne-pristupny-prostor;
 @service-fill: @verejne-pristupny-prostor;
 @road-fill: @verejne-pristupny-prostor;
-@path-fill: white;
-@footway-fill: white;
-@steps-fill: @verejne-pristupny-prostor;
-@bridleway-fill: white;
-@track-fill: white;
-@track-grade1-fill: white;
-@track-grade2-fill: white;
+@path-fill: @cesta;
+@footway-fill: @cesta;
+@steps-fill: @cesta;
+@bridleway-fill: @cesta;
+@track-fill: @cesta;
+@track-grade1-fill: @cesta;
+@track-grade2-fill: @cesta;
 
 @roads-text: black;
 @island-text: black;
