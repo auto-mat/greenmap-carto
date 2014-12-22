@@ -289,20 +289,6 @@
     }
   }
 
-  [feature = 'amenity_university'],
-  [feature = 'amenity_college'],
-  [feature = 'amenity_school'],
-  [feature = 'amenity_hospital'],
-  [feature = 'amenity_kindergarten'] {
-    [zoom >= 10] {
-      polygon-fill: @school;
-      [zoom >= 12] {
-        line-width: 0.3;
-        line-color: brown;
-      }
-    }
-  }
-
   [feature = 'amenity_parking'][zoom >= 10] {
     polygon-fill: @parking;
     [zoom >= 15] {
