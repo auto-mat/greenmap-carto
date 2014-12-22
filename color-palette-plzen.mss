@@ -49,6 +49,8 @@
 
 @farmyard: @prostupna-krajina;
 @farm: @prostupna-krajina;
+@parking: white;
+@parking-line: @verejne-pristupny-prostor-linka;
 @water-color: @voda;
 @color-buildings: @domy;
 @color-buildings-line: @domy-okraj;

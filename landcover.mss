@@ -307,7 +307,7 @@
     polygon-fill: @parking;
     [zoom >= 15] {
       line-width: 0.3;
-      line-color: @parking;
+      line-color: @parking-line;
     }
   }
 

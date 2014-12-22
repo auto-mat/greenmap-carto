@@ -225,6 +225,7 @@
 @farmyard: #ddbf92;
 @farm: #ead8bd; // also farmland
 @parking: #d0d0d0;
+@parking-line: #d0d0d0;
 @playground: #ccfff1;
 @power: #bbb;
 @rest_area: #efc8c8; // also services
