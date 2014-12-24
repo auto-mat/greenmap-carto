@@ -223,6 +223,12 @@
     }
   }
 
+  [feature = 'landuse_square'] {
+    [zoom >= 14] {
+      polygon-fill: @pedestrian-fill;
+    }
+  }
+
   [feature = 'power_station'],
   [feature = 'power_generator'] {
     [zoom >= 10] {
