@@ -1471,7 +1471,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select ST_MakeLine(p1.way,\n\n       (select ST_Centroid(ST_ConvexHull(ST_Collect(p3.way))) as way\n       from planet_osm_point as p3\n       join planet_osm_station_points_rels as p4\n       on p3.osm_id = p4.osm_id\n       where ((p1.highway='bus_stop' or p1.amenity = 'bus_stop') and (p4.highway='bus_stop' or p4.amenity = 'bus_stop'))\n       and p4.rel_id = p2.rel_id\n       group by p4.rel_id, p4.name)\n\n    ) as way,\n         p1.highway, p1.railway, p1.amenity\n         from planet_osm_station_points_rels as p1\n         join planet_osm_station_points_rels as p2\n         on p1.osm_id = p2.osm_id\n         where (p1.highway='bus_stop' or p1.amenity = 'bus_stop')\n      ) as points",
+        "table": "(select ST_MakeLine(p1.way,\n\n       (select ST_Centroid(ST_ConvexHull(ST_Collect(p3.way))) as way\n       from planet_osm_point as p3\n       join planet_osm_station_points_rels as p4\n       on p3.osm_id = p4.osm_id\n       where ((p1.highway='bus_stop' or p1.amenity = 'bus_stop') and (p4.highway='bus_stop' or p4.amenity = 'bus_stop'))\n       and p4.rel_id = p2.rel_id\n       group by p4.rel_id, p4.name\n       limit 1)\n\n    ) as way,\n         p1.highway, p1.railway, p1.amenity\n         from planet_osm_station_points_rels as p1\n         join planet_osm_station_points_rels as p2\n         on p1.osm_id = p2.osm_id\n         where (p1.highway='bus_stop' or p1.amenity = 'bus_stop')\n      ) as points",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -1498,7 +1498,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select ST_MakeLine(p1.way,\n\n       (select ST_Centroid(ST_ConvexHull(ST_Collect(p3.way))) as way\n       from planet_osm_point as p3\n       join planet_osm_station_points_rels as p4\n       on p3.osm_id = p4.osm_id\n       where ((p1.railway='tram_stop') and (p4.railway='tram_stop'))\n       and p4.rel_id = p2.rel_id\n       group by p4.rel_id, p4.name)\n\n    ) as way,\n         p1.highway, p1.railway, p1.amenity\n         from planet_osm_station_points_rels as p1\n         join planet_osm_station_points_rels as p2\n         on p1.osm_id = p2.osm_id\n         where (p1.railway='tram_stop')\n      ) as points",
+        "table": "(select ST_MakeLine(p1.way,\n\n       (select ST_Centroid(ST_ConvexHull(ST_Collect(p3.way))) as way\n       from planet_osm_point as p3\n       join planet_osm_station_points_rels as p4\n       on p3.osm_id = p4.osm_id\n       where ((p1.railway='tram_stop') and (p4.railway='tram_stop'))\n       and p4.rel_id = p2.rel_id\n       group by p4.rel_id, p4.name\n       limit 1)\n\n    ) as way,\n         p1.highway, p1.railway, p1.amenity\n         from planet_osm_station_points_rels as p1\n         join planet_osm_station_points_rels as p2\n         on p1.osm_id = p2.osm_id\n         where (p1.railway='tram_stop')\n      ) as points",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
